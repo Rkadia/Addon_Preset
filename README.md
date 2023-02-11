@@ -34,7 +34,7 @@ Other things I've done include:
 * Comments spread throughout the code to help new users understand what everything does.
 
 # Installation
-Installing is very easy. Just drag and drop the Rkadia folder to your LuaMods Directory ( Default: C:\MINIONAPP\Bots\FFXIVMinion64\LuaMods )
+Installing is very easy. Drag and drop the Rkadia folder to your LuaMods Directory ( Default: C:\MINIONAPP\Bots\FFXIVMinion64\LuaMods )
 
 If it installed correctly, you should have a new dropdown member from the UI Manager. Note that if you edited the name of your plugin it won't say Rkadia.
 
