@@ -50,7 +50,7 @@
         local separator = "------------------------------------------------------------------------------"
         type = type or "LOG"
         local timestamp = os.date("%c")
-        local log_message = string.format("[%s] [Type: %s] Rkadia: %s", timestamp, level, message)
+        local log_message = string.format("[%s] [Type: %s] Rkadia: %s", timestamp, type, message)
 
         if type == "ERROR" then d(separator) d(log_message) d(separator) else d(log_message) end
     end
