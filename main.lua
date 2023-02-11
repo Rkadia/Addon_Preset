@@ -1,11 +1,11 @@
---[[This file is an edited version of Mashiros' AddonQuickStart.lua. Changes and explanations can be found in the accompanying README.]]--
+--[[This file is a modified version of Mashiros' AddonQuickStart.lua. Changes and explanations are in the accompanying README. If you find any mistakes, please contact me at Rkadia#5016.]]--
 
 
 --[[This table defines the plugin, and will be loaded into Minion if the code runs without errors.]]--
     Rkadia = {} 
     local self = Rkadia
 
---[[Information about our plugin that we can reference multiple times throughout the rest of the code if we need to.]]--
+--[[This is reference to the plugin's information stored for easy access later in the code..]]--
     self.Info = {
         Author = "Rkadia",
         AddonName = "Rkadia",
@@ -34,7 +34,7 @@
         }
     }
 
---[[This is where we put the directories for various things like Settings and Icons.]]--
+--[[The directories for settings and icons are stored in this section]]--
     local lua_path = GetLuaModsPath()
     local base_path = lua_path .. "\\Rkadia"
 
@@ -45,18 +45,17 @@
         Settings_File = base_path.. "\\Settings\\Settings.ini"
     }
 
---[[This will print messages to the console. After the debug phase of your code is over I highly recommend removing the ----------
-    so console doesnt get cluttered.]]--
-    self.Log = function(message, level) -- This is just formatted in a way that I prefer.
+--[[function prints messages to the console, with my preferred formatting compared to the original version.]]--
+    self.Log = function(message, type) 
         local separator = "------------------------------------------------------------------------------"
-        level = level or "NOTICE"
+        type = type or "LOG"
         local timestamp = os.date("%c")
         local log_message = string.format("[%s] [Type: %s] Rkadia: %s", timestamp, level, message)
 
-        if level == "ERROR" then d(separator) d(log_message) d(separator) else d(log_message) end
+        if type == "ERROR" then d(separator) d(log_message) d(separator) else d(log_message) end
     end
 
---[[This function will see if the folders we need are created, and if not it will create them.]]--
+--[[This function checks if the necessary folders exist and creates them if they do not.]]--
     local function create_folder(path)
         self.Log('Checking if folder exists...', "LOG")
         cmd = "if exist " .. path .. " echo exists"
@@ -74,6 +73,7 @@
         end
     end
     
+    --[[This function saves the settings.]]--
     function Export_Settings(t, file)
         local file = io.open(file, "w")
         for section, values in pairs(t) do
@@ -85,6 +85,8 @@
         file:close()
     end
     
+
+    --[[This imports our settings to the Rkadia_Settings table.]]--
     function Import_Settings(file)
         local t = {}
         local section
@@ -104,7 +106,7 @@
     
 
 
---[[This sets up the groundwork for a GUI to be drawn.]]--
+--[[This sets up the foundation for our main UI.]]--
     self.GUI = {
         Open = false,
         Visible = true,
@@ -113,7 +115,7 @@
         ToolTip = self.Info.Description
     }
 
---[[This is our initialize function. When the bot loads our Rkadie Table on Line 5, this code will execute.]]--
+--[[This is the initialize function, which runs when Minion loads the Rkadia Table.]]--
     Rkadia.Init = function()
         create_folder(self.Directories.Settings_Path)
         create_folder(self.Directories.Icons_Path)
@@ -138,7 +140,7 @@
     end
 
 
---[[This is the function of our main GUI. We set the groundwork for this earlier on Line <line>.]]
+--[[This is the main GUI function, the groundwork for this was established in a previous section.]]
     Rkadia.MainWindow = function()
 
         --[[Draws our main window]]--
