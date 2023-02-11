@@ -1,4 +1,5 @@
---[[This file is a modified version of Mashiros' AddonQuickStart.lua. Changes and explanations are in the accompanying README. If you find any mistakes, please contact me at Rkadia#5016.]]--
+--[[This file is a modified version of Mashiros' AddonQuickStart.lua. Changes and explanations are in the accompanying README.
+    If you find any mistakes, please contact me at Rkadia#5016.]]--
 
 
 --[[This table defines the plugin, and will be loaded into Minion if the code runs without errors.]]--
