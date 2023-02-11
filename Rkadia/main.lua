@@ -31,7 +31,7 @@
         ["Other Settings"] = {
             Key1 = "Testing Stuff",
             Key2 = "Again and Again"
-        }
+        },
     }
 
 --[[The directories for settings and icons are stored in this section]]--
