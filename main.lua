@@ -27,7 +27,6 @@
         ["My Settings"] = {
             Key1 = "yeah!",
             Key2 = "No!",
-            Key3="Maybe?!"
         },
         ["Other Settings"] = {
             Key1 = "Testing Stuff",
