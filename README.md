@@ -32,3 +32,6 @@ Other things I've done include:
 * Removed mash's library dependency. You no longer need it for this.
 * Use cmd commands instead of pre-made minion-lua functions.
 * Comments spread throughout the code to help new users understand what everything does.
+
+# Conclusion
+I have executed a thorough revision of the original script and modified it to align with my specific requirements. The annotations and explanations throughout the main.lua file have been updated to facilitate comprehension for novice developers. In the event that any discrepancies are identified, kindly reach out to me at Rkadia#5016. Thank you!!
