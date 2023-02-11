@@ -8,7 +8,8 @@ This was tailored for fresh users. It offers better readability compared to mash
 A decent amount. One thing I did was enhance the code to be more performance friendly and safer. 
 
 An example of this is here:
-```self.GUI = {
+```
+self.GUI = {
     Open    = false,
     Visible = true,
     OnClick = loadstring(self.Info.ClassName .. [[.GUI.Open = not ]] .. self.Info.ClassName .. [[.GUI.Open]]),
