@@ -24,7 +24,7 @@ self.GUI = {
     Visible = true,
     OnClick = function() self.GUI.Open = not self.GUI.Open end,
     ToolTip = self.Info.Description
-    }
+}
 ```
 The original code by mash has several issues. First, the use of loadstring is considered a security risk and should be avoided whenever possible. this is because it allows arbitrary code execution which can be dangerous if malicious code is executed. second reason is performance. using loadstring to set values is not optimal and can lead to decreased performance which is significant given how awful lua's default performance is. It's better to use anonymous functions like I have instead to increase the performance of the script.
 
