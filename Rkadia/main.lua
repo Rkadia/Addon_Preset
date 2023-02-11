@@ -110,7 +110,7 @@
     self.GUI = {
         Open = false,
         Visible = true,
-        OnClick = function() self.GUI.Open = not self.GUI.Open end, --Anonymous functions make the code easier to read imo, also anonymous functions can be faster to execute than loadstring because they are compiled directly into the code, rather than being interpreted at runtime.
+        OnClick = function() self.GUI.Open = not self.GUI.Open end,
         IsOpen = function() return self.GUI.Open end,
         ToolTip = self.Info.Description
     }
