@@ -33,5 +33,8 @@ Other things I've done include:
 * Use cmd commands instead of pre-made minion-lua functions.
 * Comments spread throughout the code to help new users understand what everything does.
 
+# Installation
+Installing is very easy. Just drag and drop the Rkadia folder to your LuaMods Directory. ( Default: C:\MINIONAPP\Bots\FFXIVMinion64\LuaMods )
+
 # Conclusion
 I have executed a thorough revision of the original script and modified it to align with my specific requirements. The annotations and explanations throughout the main.lua file have been updated to facilitate comprehension for novice developers. In the event that any discrepancies are identified, kindly reach out to me at Rkadia#5016. Thank you!!
